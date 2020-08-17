@@ -1,0 +1,21 @@
+y=5; #global variable
+def outer():
+    c = 12; # enclosed variable
+    def inner():
+        x= 10; #local variable
+        print("local variable" + str(x))
+        print("enclosed variable" + str(c))
+        print("global variable" + str(y))
+    inner() # calling inner function
+    # print("local variable" + str(x))  // local cannot be called in enclosed scope
+    print("enclosed variable" + str(c))
+    print("global variable" + str(y))
+    
+outer() # calling outer function
+# print("local variable" + str(x)) // Undefind :: local cannot be called in global scope
+# print("enclosed variable" + str(c)) // Undefind :: enclosed cannot be called in global scope
+print("global variable" + str(y))
+
+
+# Code by Hesham Ali Barrakh
+# I've tried to descripe it as much as possible
